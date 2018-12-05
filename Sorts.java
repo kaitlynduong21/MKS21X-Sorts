@@ -10,8 +10,8 @@ public class Sorts{
           index = j; // set index equal to the index of the smallest integer
         }
       }
-      ary[index] = ary[i];
-      ary[i] = min;
+      ary[index] = ary[i]; //set element at the index of the min to the element of the index you are replacing
+      ary[i] = min; //set element to the minimum of the ary to the right of the specfied index
     }
   }
 
@@ -23,7 +23,7 @@ public class Sorts{
     return output += ary[ary.length-1] + "]";
 }
 
-public static void main(String[] args) {
+/*public static void main(String[] args) {
 
     // Google random int generator
 
@@ -72,11 +72,6 @@ public static void main(String[] args) {
       System.out.println("TEST CASE - PASS");
     } else {
       System.out.println("TEST CASE - FAIL");
-    }
-
+    }*/
   }
-
-/*choose the smallest put it into ary[0]
-choose the next smallest put it into ary[1]  (you can ignore the slots before the current position)
-choose the next smallest put it into ary[2]  (you can ignore the slots before the current position)*/
 }
