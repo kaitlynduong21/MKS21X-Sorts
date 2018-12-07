@@ -24,7 +24,34 @@ public class Sorts{
     return output += ary[ary.length-1] + "]";
 }
 
+public static void bubbleSort(int[] ary) {
+  for (int i = 0; i < ary.length; i ++) {
+    for (int j = 0; j < ary.length - i - 1; j ++) {
+    if (ary[j] > ary[j + 1] ) {
+      int old = ary[j];
+      ary [j] = ary [j + 1];
+      ary[j + 1] = old;
+    }
+    //System.out.println(printArray(ary));
+    }
+  }
+}
+
 public static void main(String[] args) {
+  /*int[] ary = new int[Integer.parseInt(args[0])];
+  for (int i = 0; i < ary.length; i ++) {
+    ary[i] = randgen
+  }*/
+  String sorted = "";
+  int[] test_a = {5, 1, 8, 4, 9, 6, 7, 2, 3};
+  System.out.println(printArray(test_a));
+  bubbleSort(test_a);
+  sorted = printArray(test_a);
+  System.out.println(sorted);
+}
+
+
+/*public static void main(String[] args) {
 
     // Google random int generator
 
@@ -42,7 +69,7 @@ public static void main(String[] args) {
     System.out.println(sorted);
 
     // 8 nums, [0:10]
-    /*int[] test_a = { 3, 4, 7, 1, 6, 2, 8, 6 };
+    int[] test_a = { 3, 4, 7, 1, 6, 2, 8, 6 };
     System.out.println(printArray(test_a));               // [3, 4, 7, 1, 6, 2, 8, 6]
 
 
@@ -87,4 +114,3 @@ public static void main(String[] args) {
       System.out.println("TEST CASE - FAIL");
     }*/
   }
-}
