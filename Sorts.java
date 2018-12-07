@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Sorts{
 
   public static void selectionSort(int [] ary) {
@@ -12,7 +14,7 @@ public class Sorts{
       }
       ary[index] = ary[i]; //set element at the index of the min to the element of the index you are replacing
       ary[i] = min; //set element to the minimum of the ary to the right of the specfied index
-      System.out.println(printArray(ary));
+      //System.out.println(printArray(ary));
     }
   }
 
@@ -38,16 +40,18 @@ public static void bubbleSort(int[] ary) {
 }
 
 public static void main(String[] args) {
-  /*int[] ary = new int[Integer.parseInt(args[0])];
+  int[] ary = new int[Integer.parseInt(args[0])];
+  Random randgen = new Random();
   for (int i = 0; i < ary.length; i ++) {
-    ary[i] = randgen
-  }*/
-  String sorted = "";
+    ary[i] = randgen.nextInt();
+  }
+  selectionSort(ary);
+  /*String sorted = "";
   int[] test_a = {5, 1, 8, 4, 9, 6, 7, 2, 3};
   System.out.println(printArray(test_a));
   bubbleSort(test_a);
   sorted = printArray(test_a);
-  System.out.println(sorted);
+  System.out.println(sorted);*/
 }
 
 
