@@ -46,9 +46,17 @@ public class Sorts{
       for (int i = 0; i < ary.length; i ++) {
         ary[i] = randgen.nextInt();
       }
-    selectionSort(ary);
-  }
-    /*String sorted = "";
+      selectionSort(ary);
+    }
+    /*if (args.length == 1) {
+      int[] ary = new int[Integer.parseInt(args[0])];
+      Random randgen = new Random();
+      for (int i = 0; i < ary.length; i ++) {
+        ary[i] = randgen.nextInt();
+      }
+      bubbleSort(ary);
+    }
+    String sorted = "";
     int[] test_a = {5, 1, 8, 4, 9, 6, 7, 2, 3};
     System.out.println(printArray(test_a));
     bubbleSort(test_a);
