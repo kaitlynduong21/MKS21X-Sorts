@@ -39,8 +39,28 @@ public class Sorts{
     }
   }
 
+  public static void insertionSort(int[] data) {
+    for (int i = 1; i < data.length; i ++) {
+      int old = data[i];
+      for (int j = i - 1; j >= 0; j --) {
+        if (j == 0) {
+          data[j] = old;
+        }
+        if (old < data[j]) {
+          data[j + 1] = data[j];
+        }
+        if (old >= data[j]) {
+          data[j + 1] = old;
+        }
+
+        //System.out.println(printArray(data));
+      }
+      //System.out.println(printArray(data));
+    }
+  }
+
   public static void main(String[] args) {
-    if (args.length == 1) {
+    /*if (args.length == 1) {
       int[] ary = new int[Integer.parseInt(args[0])];
       Random randgen = new Random();
       for (int i = 0; i < ary.length; i ++) {
@@ -48,19 +68,20 @@ public class Sorts{
       }
       selectionSort(ary);
     }
-    /*if (args.length == 1) {
+    if (args.length == 1) {
       int[] ary = new int[Integer.parseInt(args[0])];
       Random randgen = new Random();
       for (int i = 0; i < ary.length; i ++) {
         ary[i] = randgen.nextInt();
       }
       bubbleSort(ary);
-    }
+    }*/
     String sorted = "";
-    int[] test_a = {5, 1, 8, 4, 9, 6, 7, 2, 3};
+    int[] test_a = {4, 3, 2, 10, 12, 1, 5, 6};
     System.out.println(printArray(test_a));
-    bubbleSort(test_a);
+    insertionSort(test_a);
     sorted = printArray(test_a);
-    System.out.println(sorted);*/
+    System.out.println(sorted);
   }
+
 }
