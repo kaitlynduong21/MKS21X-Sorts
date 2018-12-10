@@ -54,7 +54,7 @@ public class Sorts{
           j = -1;
         }
       }
-      System.out.println(printArray(data));
+      //System.out.println(printArray(data));
     }
   }
 
