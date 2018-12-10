@@ -43,19 +43,18 @@ public class Sorts{
     for (int i = 1; i < data.length; i ++) {
       int old = data[i];
       for (int j = i - 1; j >= 0; j --) {
-        if (j == 0) {
-          data[j] = old;
-        }
-        if (old < data[j]) {
+        if (old <= data[j]) {
           data[j + 1] = data[j];
+          if (j == 0) {
+            data[j] = old;
+          }
         }
-        if (old >= data[j]) {
+        if (old > data[j]) {
           data[j + 1] = old;
+          j = -1;
         }
-
-        //System.out.println(printArray(data));
       }
-      //System.out.println(printArray(data));
+      System.out.println(printArray(data));
     }
   }
 
