@@ -69,9 +69,12 @@ public class Sorts{
       bubbleSort(ary);
     }*/
     String sorted = "";
-    int[] test_a = {4, 3, 2, 10, 12, 1, 5, 6};
+    int[] test_a = new int [10000000];
+    for (int i = 0; i < test_a.length; i ++) {
+      test_a[i] =  0;
+    }
     System.out.println(printArray(test_a));
-    insertionSort(test_a);
+    bubbleSort(test_a);
     sorted = printArray(test_a);
     System.out.println(sorted);
   }
