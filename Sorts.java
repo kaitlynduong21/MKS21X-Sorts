@@ -42,19 +42,12 @@ public class Sorts{
   public static void insertionSort(int[] data) {
     for (int i = 1; i < data.length; i ++) {
       int old = data[i];
-      for (int j = i - 1; j >= 0; j --) {
-        if (old <= data[j]) {
-          data[j + 1] = data[j];
-          if (j == 0) {
-            data[j] = old;
-          }
-        }
-        if (old > data[j]) {
-          data[j + 1] = old;
-          j = -1;
-        }
+      int j = i - 1;
+      while(j >= 0 && data[j] > old) { //when j is 0 or more and the element at j is greater than the original
+        data[j + 1] = data[j]; //shift the element to the right
+        j --; //go down a unit
       }
-      //System.out.println(printArray(data));
+      data[j + 1] = old; //set the empty slot as the original
     }
   }
 
