@@ -30,18 +30,16 @@ public class Sorts{
     //boolean a = false;
     for (int i = 0; i < data.length - 1; i ++) {
       boolean a = false;
-      if (data[i] > data[i + 1]) {
-        a = true;
-      }
       for (int j = 0; j < data.length - i - 1; j ++) {
-        if(a){
+        if (data[j] > data[j + 1]) {
           int old = data[j];
           data [j] = data [j + 1];
           data[j + 1] = old;
         }
-        System.out.println(printArray(ary));
+        //System.out.println(printArray(data));
       }
     }
+    //System.out.println("end:" + printArray(data));
   }
 
   public static void insertionSort(int[] data) {
@@ -72,7 +70,7 @@ public class Sorts{
         ary[i] = randgen.nextInt();
       }
       bubbleSort(ary);
-    }
+    }*/
     String sorted = "";
     int[] test_a = new int [1000000];
     for (int i = 0; i < test_a.length; i ++) {
@@ -81,14 +79,13 @@ public class Sorts{
     //System.out.println(printArray(test_a));
     bubbleSort(test_a);
     //sorted = printArray(test_a);
-    //System.out.println(sorted);*/
-
-    String sorted = "";
-    int[] test_a = new int [1, 3, 2, 6, 4, 10, 8];
+    //System.out.println(sorted);
+    /*String sorted = "";
+    int[] test_a = {5, 1, 12, -5, 16};
     System.out.println(printArray(test_a));
     bubbleSort(test_a);
     sorted = printArray(test_a);
-    System.out.println(sorted);
+    System.out.println(sorted);*/
   }
 
 }
