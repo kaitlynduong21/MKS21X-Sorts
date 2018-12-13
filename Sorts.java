@@ -29,17 +29,20 @@ public class Sorts{
   public static void bubbleSort(int[] data) {
     //boolean a = false;
     for (int i = 0; i < data.length - 1; i ++) {
-      boolean a = false;
+      boolean swap = false;
       for (int j = 0; j < data.length - i - 1; j ++) {
         if (data[j] > data[j + 1]) {
           int old = data[j];
           data [j] = data [j + 1];
           data[j + 1] = old;
+          swap = true; //it should continue to pass through if it has made swaps
         }
         //System.out.println(printArray(data));
       }
+      if (swap == false) {
+        i = data.length; //if it had not swapped that means it is in order, so do not continue swapping
+      }
     }
-    //System.out.println("end:" + printArray(data));
   }
 
   public static void insertionSort(int[] data) {
@@ -70,22 +73,22 @@ public class Sorts{
         ary[i] = randgen.nextInt();
       }
       bubbleSort(ary);
-    }*/
+    }
     String sorted = "";
     int[] test_a = new int [1000000];
     for (int i = 0; i < test_a.length; i ++) {
       test_a[i] =  0;
     }
     //System.out.println(printArray(test_a));
-    bubbleSort(test_a);
+    bubbleSort(test_a);*/
     //sorted = printArray(test_a);
     //System.out.println(sorted);
-    /*String sorted = "";
+    String sorted = "";
     int[] test_a = {5, 1, 12, -5, 16};
     System.out.println(printArray(test_a));
     bubbleSort(test_a);
     sorted = printArray(test_a);
-    System.out.println(sorted);*/
+    System.out.println(sorted);
   }
 
 }
